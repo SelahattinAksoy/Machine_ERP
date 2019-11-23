@@ -1,0 +1,24 @@
+{% if user.is_authenticated %}
+{% include 'bars.html'  %}
+<div style="margin-left:100px;">
+<p>SELO</p>
+ {% load static %}
+<p>{{text}}</p>
+<form method="post">
+    {% csrf_token %}
+<button type="submit">KAYIT</button>
+
+
+   </form>
+
+
+<audio controls  src="/static/sound/out.mp3">
+</audio>
+</div>
+
+
+{% else %}
+    <p>aa</p>
+
+
+{% endif %}

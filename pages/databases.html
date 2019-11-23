@@ -1,0 +1,51 @@
+{% if user.is_authenticated %}
+<html>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% include 'bars.html'  %}
+
+  <style>
+
+      .divide{
+          margin:12px 12px 12px 12px;
+          height:300px;
+          width:100px;
+          flex:1;
+      }
+
+  </style>
+<body>
+<p>databasesasdcAFaf</p>
+
+<div style="margin-left:25px; margin-top:25px; max-height: 80vh;" class="pre-scrollable">
+<div class="container" style="background:red;">
+  <div class="row ">
+    <div class="col divide">Column</div>
+    <div class="col divide">Column</div>
+    <div class="w-100"></div>
+    <div class="col divide">Column</div>
+    <div class="col divide">Column</div>
+       <div class="w-100"></div>
+      <div class="col divide">Column</div>
+    <div class="col divide">Column</div>
+    <div class="w-100"></div>
+    <div class="col divide">Column</div>
+    <div class="col divide">Column</div>
+  </div>
+</div>
+
+
+</div>
+
+
+
+{% else %}
+    <p>aa</p>
+</body>
+
+
+</html>
+
+{% endif %}

@@ -1,0 +1,24 @@
+<html>
+ {% load static %}
+
+<title>Ana Sayfa
+</title>
+<link rel="static/css/css.css">
+
+ <style>
+
+     .left-space{
+
+          margin-left:100px;
+
+     }
+ </style>
+
+
+ <body style="background:#3c3e42">
+{% include 'bars.html'   %}
+<p class="left-space">WELCOME ,{% if user.is_authenticated %}{{user.username}}{% endif %}</p>
+
+</body>
+
+</html>

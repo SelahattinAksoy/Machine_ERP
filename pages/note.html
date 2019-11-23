@@ -1,0 +1,51 @@
+{% if user.is_authenticated %}
+<html>
+
+<body>
+
+{% include 'bars.html'   %}
+<div style="margin-left:100px; margin-top:35px;">
+
+
+<h1 style="color:red">NOT EKLE :</h1>
+
+<form action="/note/" method="post">
+     {% csrf_token %}
+  <div class="form-group">
+    <label >Not başlığı :</label>
+    <input name="notehead"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Not başlığı giriniz...">
+    <small id="emailHelp" class="form-text text-muted">Notlarda arama yaparken bu başlığı kullanınız...</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Notunuz :</label>
+    <input name="note"  style="height:55px" type="textarea" class="form-control" id="exampleInputPassword1" placeholder="Notunuzu giriniz...">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+
+<h1 style="color:red">Notlar :</h1>
+<div style="height:200px; background:lightblue" class="pre-scrollable">
+
+  {% for i in notes %}
+    <p>  <strong> {{i}}  = </strong>  {{i.note}}</p>
+
+    {% endfor %}
+
+
+</div>
+
+
+</div>
+
+
+
+</body>
+
+{% else %}
+    <p>siktir puşt</p>
+</html>
+
+{% endif %}

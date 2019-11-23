@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<title>Beta ERP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+{% if user.is_authenticated %}
+
+<style>
+
+</style>
+<body>
+
+
+
+<nav style="background:black;" class="navbar navbar-expand-lg navbar-dark  ">
+  <a class="navbar-brand" href="#" >BETA</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<!--  importana navbar-fixed-top bootsrap classs -->
+<!--  importana navbar-fixed-top bootsrap classs -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+        <li class="nav-item">
+            <p style="margin-left:155px; text-transform: uppercase;" class="navbar-brand"> {% if user.is_authenticated %}{{user.username}}{% endif %}</p>
+        </li>
+
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+      <li class="nav-item">
+        <a class="nav-link " href="/logout"  >Logout</a>
+      </li>
+ </ul>
+  </div>
+</nav>
+
+
+<div class="w3-sidebar w3-bar-block w3-black " style="width:70px">
+  <a href="/mainpage/" class="w3-bar-item w3-button"><i class="fa fa-bars"></i></a>
+  <a href="/mainpage/" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+  <a href="/map" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+  <a href="/databases" class="w3-bar-item w3-button"><i class="fa fa-database"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-android"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-refresh "></i></a>
+  <a href="/chart" class="w3-bar-item w3-button"><i class="fa fa-bar-chart"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user-circle-o "></i></a>
+  <a href="/note" class="w3-bar-item w3-button"><i class="fa fa-sticky-note "></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash"></i></a>
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-calculator" aria-hidden="true"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-upload" aria-hidden="true"></i></a>
+
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-download" aria-hidden="true"></i></a>
+<a href="#" class="w3-bar-item w3-button"><i class="fa fa-try" aria-hidden="true"></i></a>
+  <a href="/speech" class="w3-bar-item w3-button"><i class="fa fa-microphone" aria-hidden="try"></i></a>
+</div>
+{% else %}
+    <p>yoh amına</p>
+
+<div style="margin-left:70px">
+
+<div class="w3-container">
+<h2>Selocan</h2>
+<p>Page will be loading .....</p>
+</div>
+
+</div>
+
+</body>
+{% endif %}
+</html>
